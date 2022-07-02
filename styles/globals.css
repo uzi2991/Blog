@@ -1,16 +1,25 @@
-html,
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+code {
+  font-family: 'Fira Code', monospace;
 }
 
-* {
-  box-sizing: border-box;
+@layer utilities {
+  .wrapper {
+    @apply w-full max-w-screen-lg px-4 mx-auto;
+  }
+}
+
+@layer components {
+  .title {
+    @apply text-primary uppercase font-semibold tracking-wider;
+  }
 }
